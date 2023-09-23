@@ -19,3 +19,7 @@ Clean architecture is a way of designing software that makes code more understan
    The core folder the main folder is much more important, it includes the core things that we need throughout the entire application (globally), for 
    example DI or application theme, so if we have a task/action that everyone will need, then it’s better to put it in the core. It also includes 
    some other folders such as (Resources, Utilities, etc.).
+
+4. **CONFIG folder** 
+   The config folder can contain both application configurations, for example Environment Variables, and Environment Services in order
+   to launch applications with the corresponding flags.

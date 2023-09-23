@@ -26,4 +26,5 @@ Clean architecture is a way of designing software that makes code more understan
 
 5. **DATA folder**
    Data is the bottom level, responsible for directly working with raw data from different data sources (REST API, GraphQl, Sqlite, etc.).
-   The raw data will then be collated or transformed into models.
+   The raw data will then be collated or transformed into models. models at the data level are different from models at the Entities level, if we 
+   want to change the raw data, these changes will not affect the internal entities (Domain’s Entities).

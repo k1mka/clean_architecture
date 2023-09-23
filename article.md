@@ -26,5 +26,19 @@ Clean architecture is a way of designing software that makes code more understan
 
 5. **DATA folder**
    Data is the bottom level, responsible for directly working with raw data from different data sources (REST API, GraphQl, Sqlite, etc.).
-   The raw data will then be collated or transformed into models. models at the data level are different from models at the Entities level, if we 
-   want to change the raw data, these changes will not affect the internal entities (Domain’s Entities).
+   The raw data will then be collated or transformed into models. Models at the data level are different from models at the Entities level, if we 
+   want to change the raw data, these changes will not affect the internal entities (Domain’s Entities). The date also contains local storage, both 
+   its abstraction and implementation. In the folder with local data, you can create a facade folder, which will contain local storage solutions, 
+   this can be a regular Shered Preff or some kind of Secure Storage for storing tokens. In the folder with the remote storage, you can create an API 
+   folder to divide the application flow in as much detail as possible, for example, requests for authorization separately, requests for filling out 
+   a profile separately. It all depends on the scale of your application. And of course, our Network Service, in the data folder there is a well- 
+   established solution with the help of which we will send requests to the server.
+
+6. **Domain folder**
+   The domain layer contains only internal objects, which means that our domain objects are completely independent of any changes that may occur 
+   outside of this layer.The presentation and data layers depend on this layer because the data layer will implement everything that has ever been 
+   written in the domain, and the presentation layer will use these implementations to be used as injected dependencies.
+   This layer contains a mapper that transfers data from data-level models to the domain-level model and vice versa, in order to flexibly replace 
+   databases in the future.
+
+7. **Presentation folder** (UI)

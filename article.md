@@ -42,3 +42,11 @@ Clean architecture is a way of designing software that makes code more understan
    databases in the future.
 
 7. **Presentation folder** (UI)
+   The presentation folder contains folders with screens and widgets. For each screen, a separate folder is created, which contains the layout of 
+   this screen and the implementation of the bloc. In the widgets folder, the files are divided by molecular structure, for me these are usually 
+   atoms, molecules, organisms and pages, i don’t see the point in aggregating more strongly. As for me, this is quite enough. Widgets are divided 
+   according to the principle of separation of responsibilities, for example, a button that simply contains its name and color is an atom, and a form 
+   for filling out data that contains input fields and a button can already be an organism. I think you understand the basic principle you can read 
+   more about the molecular structure here: http://surl.li/lkkar
+   Also, the presentation layer can contain Tokens, this is a class with a set of constant sizes that will be used in the future to indicate spaces 
+   or paddings, the main pattern of this idea is for the numbers to be multiples of two.

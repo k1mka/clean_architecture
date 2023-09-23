@@ -23,3 +23,7 @@ Clean architecture is a way of designing software that makes code more understan
 4. **CONFIG folder** 
    The config folder can contain both application configurations, for example Environment Variables, and Environment Services in order
    to launch applications with the corresponding flags.
+
+5. **DATA folder**
+   Data is the bottom level, responsible for directly working with raw data from different data sources (REST API, GraphQl, Sqlite, etc.).
+   The raw data will then be collated or transformed into models.

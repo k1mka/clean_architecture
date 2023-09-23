@@ -5,3 +5,11 @@
 Clean architecture is a way of designing software that makes code more understandable and flexible. It breaks the application into independent parts, each of which performs its own specific task, and at the same time they are weakly dependent on each other. This makes it easier to change and expand the application without affecting other parts of the application. The point is to make the code cleaner and more organized, making it easier to maintain and develop.
 
 ![Architecture diagram, if not displayed, look in the repository files!](https://github.com/k1mka/clean_architecture/blob/main/sheme.jpg)
+
+1. lib root folder
+   Contains the top-level main function, which is responsible for launching the entire program, including initializing various dependencies when the 
+   application starts. Main can reference appEntry class, this file is part of the Flutter application and is responsible for setting up and 
+   configuring the application, including setting up the theme, localization, routing, and dependency injection. You can do all this in main, but 
+   it’s better to separate it. This will make the code more modular.
+
+2. 
